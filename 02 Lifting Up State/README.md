@@ -6,39 +6,66 @@
 
 ### The Provider Explanation!
 
-- In this, we have made a global model class with 
-### The Boring Solution : 
+- In this, we have made a global model class which acts as "ChangeNotifier" : It Notifies Stateful widget class who are listening to it's changes via "ChangeNotifierProvider" which is Parent Widget of both our Widgets in Widget Tree. Both the Stateful Widget are accessing model via "Provider" provided by Parent Widget. Getters and Setters are used for getting/updating values of properties in model.
 
-- We stored state of SliderIndicator (whose state we want to change through slider) globally in a variable called "indicatorState", then we could access this stored state's "setState(() {})" method into MySliderState's "onValueChange" function since it("indicatorState") is globally accessible. This led to refreshing the state of SliderIndicator.
+### The Provider Solution : 
 
-**SliderIndicator.dart**
+- Note that we haven't called any "setState(() {})" explicitly in this approach. ChangeNotifier and notifyListeners takes care of all stuff. Also we need not worry about memory overflow, ChangeNotifierProvider takes care disposing stuff behind the curtains for us.
+
+**SliderValue.dart - Model**
 ```dart
-// Saving State of Widget in Global Instance
-_SliderIndicatorState indicatorState;
+class SliderValue with ChangeNotifier {
+  double _sliderValue = 10.0;
 
-class SliderIndicator extends StatefulWidget {
-  @override
-  _SliderIndicatorState createState() {
-    indicatorState = _SliderIndicatorState();
-    return indicatorState;
+  double getSliderValue() {
+    return _sliderValue;
+  }
+
+  void setSliderValue(double newValue) {
+    _sliderValue = newValue;
+    notifyListeners();
   }
 }
 ```
 
-**MySlider.dart**
+**main.dart**
 ```dart
-  void _onValueChange(double val) {
-    setState(() {
-      _value = val;
-    });
-    // Change State of Neighbour Widget = SliderIndicator
-    indicatorState.setState(() {
-      indicatorState.sliderValue = val;
-    });
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      builder: (context) => SliderValue(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("State Management"),
+          centerTitle: true,
+          //...
+          //....
+```
+
+**SliderIndicator.dart**
+```dart
+  Widget build(BuildContext context) {
+    final schedule = Provider.of<SliderValue>(context);
+    return Text(
+      "Slider Value : ${schedule.getSliderValue()}",
+      style: TextStyle(fontSize: 42),
+    );
   }
 ```
 
-- Also Note that we have made state variables of SliderIndicator _non-private_!
+**MySlider.dart**
+```dart
+  Widget build(BuildContext context) {
+    final schedule = Provider.of<SliderValue>(context);
+    return Slider(
+      min: 0,
+      max: 100,
+      divisions: 10,
+      onChanged: (val) => schedule.setSliderValue(val),
+      value: schedule.getSliderValue(),
+      label: schedule.getSliderValue().toInt().toString(),
+    );
+  }
+```
 
 - Feel Free to clone this repo and test code. I have kept it fairly simple to understand for beginners.
 
