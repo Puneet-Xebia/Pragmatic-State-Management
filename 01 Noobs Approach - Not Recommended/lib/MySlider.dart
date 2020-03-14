@@ -25,9 +25,9 @@ class _MySliderState extends State<MySlider> {
       min: 0,
       max: 100,
       divisions: 10,
+      label: _value.toInt().toString(),
       onChanged: _onValueChange,
       value: _value,
-      label: _value.toInt().toString(),
     );
   }
 }
