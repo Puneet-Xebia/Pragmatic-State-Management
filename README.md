@@ -8,7 +8,7 @@
 
 - We have got 2 separate Stateful Widgets, one being Slider and another being SliderIndicator. Both of them resides in their own files. The goal was to modify state of one from another as simple as possible. In short we want to call "setState(() {})" of one stateful widget from another.
 
-**The Boring Solution** : 
+### The Boring Solution : 
 
 - We stored state of SliderIndicator (whose state we want to change through slider) globally in a variable called "indicatorState", then we could access this stored state's "setState(() {})" method into MySliderState's "onValueChange" function since it("indicatorState") is globally accessible. This led to refreshing the state of SliderIndicator.
 
