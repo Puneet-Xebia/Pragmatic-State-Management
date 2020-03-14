@@ -23,10 +23,12 @@ class _SliderIndicatorState extends State<SliderIndicator> {
   @override
   Widget build(BuildContext context) {
     return Consumer<MySchedule>(
-      builder: (context, schedule, _) => Text(
-        "Slider Value : ${schedule.getStateManagementValue()}",
-        style: TextStyle(fontSize: 42),
-      ),
+      builder: (context, schedule, _) {
+        return Text(
+          "Slider Value : ${schedule.getStateManagementValue()}",
+          style: TextStyle(fontSize: 42),
+        );
+      },
     );
   }
   */
