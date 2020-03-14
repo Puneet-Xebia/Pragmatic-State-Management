@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_management/MySlider.dart';
 import 'package:state_management/SliderIndicator.dart';
-import 'schedule.dart';
+import 'SliderValue.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,7 +25,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      builder: (context) => MySchedule(),
+      builder: (context) => SliderValue(),
       child: Scaffold(
         appBar: AppBar(
           title: Text("State Management"),
