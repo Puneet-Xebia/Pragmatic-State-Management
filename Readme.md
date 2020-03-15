@@ -4,7 +4,7 @@
 
 ## Goal
 
-Change Slider Indicator Value (top) when slider is _dragged_. We want to notify Slider Indicator to show "updated" value of current position of slider.
+Change Slider Indicator Value (top) when slider is _dragged_. We want to notify Slider Indicator to show current position of slider.
 
 ## We have two methods here
 
