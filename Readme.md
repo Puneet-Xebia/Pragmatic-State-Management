@@ -1,7 +1,6 @@
 # Programatic State Management in Flutter
 
-<div style="text-align:center">
-<br><img src="./statemanagement.gif" height="440px" width="auto"><br><br></div>
+<p align="center"><br><img src="./statemanagement.gif" height="440" width="auto"><br><br></p>
 
 ## Goal
 
