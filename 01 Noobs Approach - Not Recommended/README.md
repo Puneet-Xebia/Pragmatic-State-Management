@@ -2,7 +2,8 @@
 
 - Dummy way to access and manage states of widget GLOBALLY
 
-![SnapShot](./snap.png)
+<div style="text-align:center">
+<br><img src="../statemanagement.gif" height="440px" width="auto"><br><br></div>
 
 ### The Boring Explanation!
 
