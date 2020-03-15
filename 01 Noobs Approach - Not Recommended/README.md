@@ -2,8 +2,7 @@
 
 - Dummy way to access and manage states of widget GLOBALLY
 
-<div style="text-align:center">
-<br><img src="../statemanagement.gif" height="440px" width="auto"><br><br></div>
+<p align="center"><br><img src="../statemanagement.gif" height="440" width="auto"><br><br></p>
 
 ### The Boring Explanation!
 

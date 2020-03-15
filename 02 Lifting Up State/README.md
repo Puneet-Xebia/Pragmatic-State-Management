@@ -2,8 +2,7 @@
 
 - This approach is much appreciated in flutter community for updating Widgets states. It is easy to understand and implement
 
-<div style="text-align:center">
-<br><img src="../statemanagement.gif" height="440px" width="auto"><br><br></div>
+<p align="center"><br><img src="../statemanagement.gif" height="440" width="auto"><br><br></p>
 
 ### The Provider Explanation!
 
