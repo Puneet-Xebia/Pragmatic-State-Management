@@ -1,4 +1,4 @@
-# Programatic State Management in Flutter
+# Progmatic State Management in Flutter
 
 <p align="center"><br><img src="./statemanagement.gif" height="440" width="auto"><br><br></p>
 
