@@ -5,12 +5,12 @@
   <img src="./recording2.gif" height="440" width="auto"><br>
 <br></p>
 
-Left : 
+**Left Demo :** 
 
 - 01 Noobs Approach - Not Recommended
 - 02 Lifting Up State - Provider v3.x
 
-Right : 
+**Right Demo :** 
 
 - 03 Lifting Up State - UPDATE - Provider v4
 
