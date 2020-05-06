@@ -1,6 +1,18 @@
 # Progmatic State Management in Flutter
 
-<p align="center"><br><img src="./statemanagement.gif" height="440" width="auto"><br><br></p>
+<p align="center"><br><img src="./statemanagement.gif" height="440" width="auto">
+ 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp;
+  <img src="./recording2.gif" height="440" width="auto"><br>
+<br></p>
+
+Left : 
+
+- 01 Noobs Approach - Not Recommended
+- 02 Lifting Up State - Provider v3.x
+
+Right : 
+
+- 03 Lifting Up State - UPDATE - Provider v4
 
 ## Goal
 
